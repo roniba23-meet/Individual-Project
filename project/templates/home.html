@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	</title>
+	<style>
+		body {
+			background-color:#e5e7ed
+
+		}
+
+		</style>
+
+</head>
+<body>
+	<form method="POST" action="/home">
+	<h1 class="l" style="color:black;"> CrossWord</h1>
+	<br>
+	{%for line in board%}
+		{%for i in line%}
+			{%if i==" "%}
+				<input type="text" maxlength="0" class="input" style="background-color: black;
+				height: 40px;
+			  	width: 40px;
+			  	border: 5px solid black;">
+			{%else%}
+				<input type="text" maxlength="1" class="input" style="background-color: white;
+				height: 40px;
+			  	width: 40px;
+			  	border: 5px solid black;">
+			{%endif%}
+
+		{%endfor%}
+		<br>
+	{%endfor%}
+
+	
+</form>
+</html>
